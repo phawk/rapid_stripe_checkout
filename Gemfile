@@ -81,3 +81,5 @@ gem "meta-tags"
 gem "class_variants"
 gem "http"
 gem "inline_svg"
+
+gem "stripe", "~> 8.3"
