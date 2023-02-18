@@ -32,7 +32,6 @@ module StripeService
       url: session.url
     )
   rescue => e
-    p e.inspect
     StripeServiceResponse.new(
       status: "error",
       error: e.message
