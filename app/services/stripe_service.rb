@@ -1,7 +1,7 @@
 module StripeService
   module_function
 
-  def create_checkout_session(user, product, success_url, cancel_url)
+  def create_checkout_session(user, product, success_url:, cancel_url:)
     session = Stripe::Checkout::Session.create({
       success_url: success_url,
       cancel_url: cancel_url,
@@ -35,7 +35,7 @@ module StripeService
     p e.inspect
     StripeServiceResponse.new(
       status: "error",
-      error: e
+      error: e.message
     )
   end
 
