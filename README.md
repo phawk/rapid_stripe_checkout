@@ -14,6 +14,7 @@ This app is a starter template that I use for most of my example apps that I bui
 ### Creating a fresh app
 
 ```sh
+# Setup commands
 cd ~/Sites/youtube
 git clone git@github.com:phawk/rapid-ruby-starter.git rapid_stripe_checkout
 cd rapid_stripe_checkout
@@ -23,7 +24,8 @@ git remote rm origin
 gh repo create rapid_stripe_checkout --public --source=.
 git push origin main -u
 bin/rails db:create
-bin/rails s
+# Run the server
+bin/dev
 ```
 
 ### License
