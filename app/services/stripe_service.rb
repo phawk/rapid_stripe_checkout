@@ -39,12 +39,6 @@ module StripeService
     )
   end
 
-  ## Private ##
-
-  def stripe_api_key
-    ENV.fetch("STRIPE_SECRET_KEY")
-  end
-
   class StripeServiceResponse < Struct.new(:status, :error, :url, keyword_init: true)
     def success?
       status == "ok"
