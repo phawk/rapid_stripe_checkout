@@ -15,11 +15,13 @@ This app is a starter template that I use for most of my example apps that I bui
 
 ```sh
 cd ~/Sites/youtube
-git clone git@github.com:phawk/rapid-ruby-starter.git new_project_name
-cd new_project_name
+git clone git@github.com:phawk/rapid-ruby-starter.git rapid_stripe_checkout
+cd rapid_stripe_checkout
 code .
 bundle install
 git remote rm origin
+gh repo create rapid_stripe_checkout --public --source=.
+git push origin main -u
 bin/rails db:create
 bin/rails s
 ```
