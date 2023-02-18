@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   # App routes
   resources :posts
   resources :lessons, only: :index
+  resources :checkouts, only: [:new, :create] do
+    get :success, on: :collection
+  end
 
   root "pages#home"
 end

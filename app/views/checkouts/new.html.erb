@@ -1,0 +1,7 @@
+<div>
+  <%= page_title "Buy my Stripe on Rails course" %>
+
+  <div class="mt-8">
+    <%= button_to "Buy now", checkouts_path, method: :post, class: button_classes.render, data: { turbo: false } %>
+  </div>
+</div>
